@@ -1,11 +1,17 @@
 export const TEAMS = [
-        {label: 'KS Rycerz', logo: '/images/teamB.jpeg', value: 'KS Rycerz'},
-        {label: 'Niepokorni', logo: '/images/teamA.svg', value: 'Niepokorni'}
+        {label: 'KS Rycerz', logo: '/images/ksr.jpeg', value: 'KS Rycerz'},
+        {label: 'KS Rycerz 2', logo: '/images/ksr.jpeg', value: 'KS Rycerz 2'},
+        {label: 'Sierotki', logo: '/images/sierotki.png', value: 'Sierotki'},
+        {label: 'RKS Silesia', logo: '/images/RKS-SILESIA.jpeg', value: 'RKS Silesia'},
+        {label: 'Legenda Północy', logo: '/images/teamB.jpeg', value: 'Legenda Północy'},
+        {label: 'Legenda Północy 2', logo: '/images/LEGENDA-POLNOCY.png', value: 'Legenda Północy 2'},
+        {label: 'Lwy Lublin', logo: '/images/lwy-lublin.png', value: 'Lwy Lublin'},
+        {label: 'Niepokorni', logo: '/images/niepokorni.svg', value: 'Niepokorni'}
     ];
 
 export const PREFIX = 'scoreboard-app-';
 
-export const ENDPOINT = "http://127.0.0.1:4001";
+export const ENDPOINT = "https://scoreboard.niepokorni.pl";
 
 export const SCOREBOARD = {
     "teamA": {

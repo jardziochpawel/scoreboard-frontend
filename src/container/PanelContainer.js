@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {Panel} from "../component";
 import getSecondsFromMMSS from "../helpers/getSecondsFromMMSS";
-import {SCOREBOARD, TEAMS} from "../static/data";
+import {SCOREBOARD, TEAMS, ENDPOINT} from "../static/data";
 import useCountdown from "../hooks/useCountdown";
 import useLocalStorage from "../hooks/useLocalStorage";
 
@@ -10,7 +10,7 @@ const PanelContainer = (socket) => {
     const [disabled, setDisable] = useLocalStorage('disabled', false);
 
     useEffect(()=>{
-        fetch('http://localhost:4001/scoreboard/60a17e5c75ef8d9af22dd94c', {
+        fetch(ENDPOINT+'/scoreboard/60a17e5c75ef8d9af22dd94c', {
                 method: 'GET',
                 headers: new Headers([
                     ['Content-Type', 'application/json']
@@ -19,7 +19,7 @@ const PanelContainer = (socket) => {
     }, [setScoreboard]);
 
     const submitData = ( data) => {
-        fetch('http://localhost:4001/scoreboard/60a17e5c75ef8d9af22dd94c', {
+        fetch(ENDPOINT+'/scoreboard/60a17e5c75ef8d9af22dd94c', {
             method: 'PUT',
             body: JSON.stringify(data),
             headers: new Headers([
