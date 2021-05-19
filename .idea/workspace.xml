@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/LEGENDA-POLNOCY.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/RKS-SILESIA.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/lwy-lublin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sierotki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/BC_shld.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/background.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/helmet.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/knight.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/teamA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/teamA.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/niepokorni.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/teamB.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ksr.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/ScoreBoardContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/ScoreBoardContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global-style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/global-style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/static/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +57,11 @@
     <property name="javascript.nodejs.core.library.typings.version" value="12.20.13" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -61,11 +70,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/src/hooks" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/container" />
       <recent name="$PROJECT_DIR$/src/component" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/routes" />
@@ -102,7 +111,7 @@
       <workItem from="1621021253583" duration="13000" />
       <workItem from="1621182502732" duration="19941000" />
       <workItem from="1621321474408" duration="5000" />
-      <workItem from="1621321486676" duration="1564000" />
+      <workItem from="1621321486676" duration="23215000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1621318903509</created>
@@ -118,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621322006028</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="endpoint update and static files">
+      <created>1621329378664</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621329378664</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +147,7 @@
     </ignored-roots>
     <MESSAGE value="first commit" />
     <MESSAGE value="init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+    <MESSAGE value="endpoint update and static files" />
+    <option name="LAST_COMMIT_MESSAGE" value="endpoint update and static files" />
   </component>
 </project>

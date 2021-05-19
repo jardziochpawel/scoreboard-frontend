@@ -1,3 +1,4 @@
+import React from 'react';
 import ScoreBoardContainer from "./container/ScoreBoardContainer";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import PanelContainer from "./container/PanelContainer";

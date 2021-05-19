@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+const logo = '/images/background.jpeg';
 export const GlobalStyles = createGlobalStyle`
   *, *::after, *::before {
     box-sizing: border-box;
@@ -11,4 +11,9 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Audiowide', cursive;
+    
+    background: url("${logo}") center / cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }`;

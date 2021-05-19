@@ -18,15 +18,31 @@ export default function ScoreBoardContainer(socket){
 
     return(
         <ScoreBoard>
-            <ScoreBoard.LogoTeamA logo={scoreboard.teamA.logo}/>
-            <ScoreBoard.TeamA>{scoreboard.teamA.value}</ScoreBoard.TeamA>
-            <ScoreBoard.ScoreTeamA>{scoreboard.fightersTeamA}</ScoreBoard.ScoreTeamA>
-            <ScoreBoard.ScoreTeamA>{scoreboard.pointsTeamA}</ScoreBoard.ScoreTeamA>
-            <ScoreBoard.Timer>{fancyTimeFormat(useCountdown(scoreboard.time, scoreboard.start, scoreboard.reset))}</ScoreBoard.Timer>
-            <ScoreBoard.ScoreTeamB>{scoreboard.pointsTeamB}</ScoreBoard.ScoreTeamB>
-            <ScoreBoard.ScoreTeamB>{scoreboard.fightersTeamB}</ScoreBoard.ScoreTeamB>
-            <ScoreBoard.TeamB>{scoreboard.teamB.value}</ScoreBoard.TeamB>
-            <ScoreBoard.LogoTeamB logo={scoreboard.teamB.logo}/>
+            <ScoreBoard.LogoContainer>
+                <ScoreBoard.LogoTeamA logo={scoreboard.teamA.logo}/>
+            </ScoreBoard.LogoContainer>
+            <ScoreBoard.Container>
+                <ScoreBoard.Row>
+                    <ScoreBoard.HelmetContainer fightersLeft={scoreboard.fightersTeamA}>
+                        <ScoreBoard.HelmetSVG />
+                    </ScoreBoard.HelmetContainer>
+                    <ScoreBoard.HelmetContainer right={true} fightersLeft={scoreboard.fightersTeamB}>
+                        <ScoreBoard.HelmetSVG />
+                    </ScoreBoard.HelmetContainer>
+                </ScoreBoard.Row>
+                <ScoreBoard.Row>
+                    <ScoreBoard.TeamA>{scoreboard.teamA.value}</ScoreBoard.TeamA>
+                    <ScoreBoard.ScoreTeamA>{scoreboard.pointsTeamA}</ScoreBoard.ScoreTeamA>
+                    <ScoreBoard.Timer>{fancyTimeFormat(useCountdown(scoreboard.time, scoreboard.start, scoreboard.reset))}</ScoreBoard.Timer>
+                    <ScoreBoard.ScoreTeamB>{scoreboard.pointsTeamB}</ScoreBoard.ScoreTeamB>
+                    <ScoreBoard.TeamB>{scoreboard.teamB.value}</ScoreBoard.TeamB>
+                </ScoreBoard.Row>
+            </ScoreBoard.Container>
+            <ScoreBoard.LogoContainer>
+                <ScoreBoard.LogoTeamB logo={scoreboard.teamB.logo}/>
+            </ScoreBoard.LogoContainer>
+            <ScoreBoard.Knight />
+            <ScoreBoard.BLShield />
         </ScoreBoard>
     )
 }
