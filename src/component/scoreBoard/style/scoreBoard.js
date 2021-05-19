@@ -142,22 +142,20 @@ export const HelmetContainer = styled.div`
 `;
 
 export const HelmetSVG = styled.div`
-  height: 40px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   @media(max-width: 1400px){
-    height: 30px;
-    width: 30px;
-  }
-    svg > g {
-      fill: white;
-    }
-  svg {
-    width: 40px;
     height: 40px;
+    width: 40px;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
     
     @media(max-width: 1400px){
-      height: 35px;
-      width: 35px;
+      height: 40px;
+      width: 40px;
     }
   }
 `;

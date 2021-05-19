@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/helmet_v2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/helmet_v3L.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/helmet_v3R.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/ScoreBoardContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/ScoreBoardContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global-style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/global-style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +104,7 @@
       <workItem from="1621021253583" duration="13000" />
       <workItem from="1621182502732" duration="19941000" />
       <workItem from="1621321474408" duration="5000" />
-      <workItem from="1621321486676" duration="25522000" />
+      <workItem from="1621321486676" duration="26568000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1621318903509</created>
@@ -149,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621414632452</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add media css">
+      <created>1621415910467</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1621415910467</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +179,7 @@
     <MESSAGE value="change view scoreboard" />
     <MESSAGE value="change package" />
     <MESSAGE value="remove background" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove background" />
+    <MESSAGE value="add media css" />
+    <option name="LAST_COMMIT_MESSAGE" value="add media css" />
   </component>
 </project>

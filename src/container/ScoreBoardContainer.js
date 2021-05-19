@@ -24,10 +24,10 @@ export default function ScoreBoardContainer(socket){
             <ScoreBoard.Container>
                 <ScoreBoard.Row>
                     <ScoreBoard.HelmetContainer fightersLeft={scoreboard.fightersTeamA}>
-                        <ScoreBoard.HelmetSVG />
+                        <ScoreBoard.HelmetLeft />
                     </ScoreBoard.HelmetContainer>
                     <ScoreBoard.HelmetContainer right={true} fightersLeft={scoreboard.fightersTeamB}>
-                        <ScoreBoard.HelmetSVG />
+                        <ScoreBoard.HelmetRight />
                     </ScoreBoard.HelmetContainer>
                 </ScoreBoard.Row>
                 <ScoreBoard.Row>
@@ -41,7 +41,6 @@ export default function ScoreBoardContainer(socket){
             <ScoreBoard.LogoContainer>
                 <ScoreBoard.LogoTeamB logo={scoreboard.teamB.logo}/>
             </ScoreBoard.LogoContainer>
-            <ScoreBoard.Knight />
             <ScoreBoard.BLShield />
         </ScoreBoard>
     )
