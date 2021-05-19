@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/helmet_v2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/helmet_v3L.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/helmet_v3R.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/ScoreBoardContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/ScoreBoardContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/global-style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/global-style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +50,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -104,7 +97,7 @@
       <workItem from="1621021253583" duration="13000" />
       <workItem from="1621182502732" duration="19941000" />
       <workItem from="1621321474408" duration="5000" />
-      <workItem from="1621321486676" duration="26568000" />
+      <workItem from="1621321486676" duration="26651000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1621318903509</created>
@@ -162,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621415910467</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="change helmet icon">
+      <created>1621421297898</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1621421297898</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +180,7 @@
     <MESSAGE value="change package" />
     <MESSAGE value="remove background" />
     <MESSAGE value="add media css" />
-    <option name="LAST_COMMIT_MESSAGE" value="add media css" />
+    <MESSAGE value="change helmet icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="change helmet icon" />
   </component>
 </project>

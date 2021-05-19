@@ -193,7 +193,7 @@ export const MainContainer = styled.div`
   padding: 0 200px;
   height: 120px;
   background: rgb(72, 72, 72);
-  background: linear-gradient(0deg, rgba(72, 72, 72, 0.9) 0%, rgba(68, 68, 68, 0.6) 80%, rgba(51, 51, 51, 0) 100%);
+  background: linear-gradient(0deg, rgba(72, 72, 72, 0.7) 0%, rgba(68, 68, 68, 0.4) 80%, rgba(51, 51, 51, 0) 100%);
 
   @media(max-width: 1400px){
     padding: 0 150px;
