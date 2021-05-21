@@ -101,28 +101,30 @@ export const Timer = styled.div`
 `;
 
 export const LogoTeamA = styled.div`
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   ${({logo}) => css`
     background: url("${logo}") center / contain no-repeat;
   `}
   margin: 4px 0;
+  
   @media(max-width: 1400px){
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
   }
 `;
 
 export const LogoTeamB = styled.div`
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   ${({logo}) => css`
     background: url("${logo}") center / contain no-repeat;
   `}
   margin: 4px 0;
+  
   @media(max-width: 1400px){
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
   }
 `;
 
@@ -192,7 +194,7 @@ export const MainContainer = styled.div`
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0) 100%);
 
   @media(max-width: 1400px){
-    padding: 0 150px;
+    padding: 0 150px 50px;
   }
 `;
 

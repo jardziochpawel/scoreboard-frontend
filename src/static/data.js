@@ -8,7 +8,7 @@ export const TEAMS = [
         {label: 'Legenda Północy 2', logo: '/images/LEGENDA-POLNOCY.png', value: 'Legenda Północy 2'},
         {label: 'Legenda Północy 3', logo: '/images/LEGENDA-POLNOCY.png', value: 'Legenda Północy 3'},
         {label: 'Lwy Lublin', logo: '/images/lwy-lublin.png', value: 'Lwy Lublin'},
-        {label: 'Niepokorni', logo: '/images/niepokorni.svg', value: 'Niepokorni'},
+        {label: 'Niepokorni', logo: '/images/niepokorni.png', value: 'Niepokorni'},
         {label: 'Sierotki', logo: '/images/sierotki.png', value: 'Sierotki'},
         {label: 'Taboryci', logo: '/images/sierotki.png', value: 'Taboryci'}
     ];
