@@ -106,7 +106,7 @@ const PanelContainer = () => {
     }
 
     const onStart = () => {
-        submitData({...scoreboard, start: true});
+        submitData({...scoreboard, start: true, pause: false });
     }
 
     const onPause = () => {

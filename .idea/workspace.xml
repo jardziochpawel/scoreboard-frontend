@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/PanelContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/PanelContainer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +97,7 @@
       <workItem from="1621021253583" duration="13000" />
       <workItem from="1621182502732" duration="19941000" />
       <workItem from="1621321474408" duration="5000" />
-      <workItem from="1621321486676" duration="47685000" />
+      <workItem from="1621321486676" duration="48199000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1621318903509</created>
@@ -191,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621632691245</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="change logo lwy lublin">
+      <created>1621633798353</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1621633798353</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +219,7 @@
     <MESSAGE value="remove background" />
     <MESSAGE value="change countdown component" />
     <MESSAGE value="change logo niepokorni" />
-    <option name="LAST_COMMIT_MESSAGE" value="change logo niepokorni" />
+    <MESSAGE value="change logo lwy lublin" />
+    <option name="LAST_COMMIT_MESSAGE" value="change logo lwy lublin" />
   </component>
 </project>
