@@ -101,8 +101,8 @@ export const Timer = styled.div`
 `;
 
 export const LogoTeamA = styled.div`
-  height: 150px;
-  width: 150px;
+  height: 175px;
+  width: 175px;
   ${({logo}) => css`
     background: url("${logo}") center / contain no-repeat;
   `}
@@ -115,8 +115,8 @@ export const LogoTeamA = styled.div`
 `;
 
 export const LogoTeamB = styled.div`
-  height: 150px;
-  width: 150px;
+  height: 175px;
+  width: 175px;
   ${({logo}) => css`
     background: url("${logo}") center / contain no-repeat;
   `}
@@ -188,13 +188,13 @@ export const MainContainer = styled.div`
   justify-content: space-around;
   align-items: flex-end;
   width: 100vw;
-  padding: 0 200px 50px;
+  padding: 0 100px 50px;
   height: 200px;
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0) 100%);
 
   @media(max-width: 1400px){
-    padding: 0 150px 50px;
+    padding: 0 50px 50px;
   }
 `;
 
@@ -203,5 +203,5 @@ export const LogoContainer = styled.div`
   height: auto;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 200px;
 `;

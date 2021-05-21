@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/niepokorni.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +98,7 @@
       <workItem from="1621021253583" duration="13000" />
       <workItem from="1621182502732" duration="19941000" />
       <workItem from="1621321474408" duration="5000" />
-      <workItem from="1621321486676" duration="46987000" />
+      <workItem from="1621321486676" duration="47685000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1621318903509</created>
@@ -186,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621631190766</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change logo niepokorni">
+      <created>1621632691245</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1621632691245</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +212,7 @@
     <MESSAGE value="change style transparency main container scoreBoard" />
     <MESSAGE value="remove background" />
     <MESSAGE value="change countdown component" />
-    <option name="LAST_COMMIT_MESSAGE" value="change countdown component" />
+    <MESSAGE value="change logo niepokorni" />
+    <option name="LAST_COMMIT_MESSAGE" value="change logo niepokorni" />
   </component>
 </project>
