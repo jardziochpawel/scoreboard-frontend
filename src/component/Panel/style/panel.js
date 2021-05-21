@@ -33,6 +33,14 @@ export const ButtonScoreTeamA = styled.button`
   font-family: 'Audiowide', cursive;
   white-space: nowrap;
   text-align: center;
+  color: white;
+  background-color: #202b33;
+  border: 1px solid #333;
+  border-radius: 2px;
+  
+  &:hover{
+    background-color: #8800ff;
+  }
 `;
 
 export const ButtonScoreTeamB = styled.button`
@@ -41,40 +49,42 @@ export const ButtonScoreTeamB = styled.button`
   font-family: 'Audiowide', cursive;
   white-space: nowrap;
   text-align: center;
+  color: white;
+  background-color: #202b33;
+  border: 1px solid #333;
+  border-radius: 2px;
+
+  &:hover{
+    background-color: #8800ff;
+  }
 `;
 
 export const ButtonStart = styled.button`
   width: 40%;
   padding: 10px 50px;
   font-family: 'Audiowide', cursive;
+  color: white;
+  background-color: #202b33;
+  border: 1px solid #333;
+  border-radius: 2px;
+
+  &:hover{
+    background-color: #8800ff;
+  }
 `;
 
 export const ButtonReset = styled.button`
   width: 40%;
   padding: 10px 50px;
   font-family: 'Audiowide', cursive;
-`;
+  color: white;
+  background-color: #202b33;
+  border: 1px solid #333;
+  border-radius: 2px;
 
-export const TimerInput = styled.div`
-  width: 20%;
-  
-  input {
-    width: 100%;
-    padding: 20px 20px;
-    border: 1px solid rgba(128,128,128,.2);
-    font-family: 'Audiowide', cursive;
-    text-align: center;
+  &:hover{
+    background-color: #8800ff;
   }
-`;
-
-export const Countdown = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 20px;
-  font-size: 13px;
-  border: 1px solid rgba(128,128,128,.2);
 `;
 
 export const TeamInput = styled.div`

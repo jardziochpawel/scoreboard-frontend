@@ -7,7 +7,6 @@ export const Row = styled.div`
   align-items: center;
   width: 100%;
   height: auto;
-  letter-spacing: 2px;
   color: white;
   text-shadow: 0 2px 1px #7c7c7c,
   -1px 3px 1px #545454,
@@ -160,15 +159,12 @@ export const HelmetSVG = styled.div`
   }
 `;
 
-export const Knight = styled.div`
-  position: absolute;
+export const RKP = styled.div`
   display: flex;
   justify-content: flex-end;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
+
   img{
-    width: 120px;
+    width: 90px;
   }
 `;
 
@@ -180,7 +176,7 @@ export const BLShield = styled.div`
   right: 20px;
   z-index: 1;
   img{
-    width: 70px;
+    width: 110px;
   }
 `;
 
@@ -190,10 +186,10 @@ export const MainContainer = styled.div`
   justify-content: space-around;
   align-items: flex-end;
   width: 100vw;
-  padding: 0 200px;
-  height: 120px;
-  background: rgb(72, 72, 72);
-  background: linear-gradient(0deg, rgba(72, 72, 72, 0.7) 0%, rgba(68, 68, 68, 0.4) 80%, rgba(51, 51, 51, 0) 100%);
+  padding: 0 200px 50px;
+  height: 200px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0) 100%);
 
   @media(max-width: 1400px){
     padding: 0 150px;

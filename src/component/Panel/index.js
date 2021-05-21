@@ -7,15 +7,12 @@ import {
     ButtonScoreTeamB,
     ButtonReset,
     ButtonStart,
-    TimerInput,
-    Countdown,
     Break,
     TeamInput,
     ScoreTeam
 } from './style/panel';
-import TimeInput from "../../helpers/TimeInput";
-import fancyTimeFormat from "../../helpers/fancyTimeFormat";
 import SelectInput from "../selectInput";
+import {Countdown} from "../index";
 
 export default function Panel({children, ...restProps}){
 
@@ -66,27 +63,13 @@ Panel.ButtonReset = function ({children, ...restProps}){
     )
 }
 
-Panel.TimerInput = function ({disabled, cd, start, setValue, value, onChange, ...restProps}){
+Panel.Countdown = function ({ ...restProps}){
 
     return(
-        <>
-
-            <TimerInput {...restProps}>
-                {(start || disabled) && <Countdown>
-                    {fancyTimeFormat(cd)}
-                </Countdown>}
-
-                {!disabled && <TimeInput setValue={setValue}
-                                      value={fancyTimeFormat(value)}
-                                      onTimeChange={onChange}
-                                      start={start}
-                                      hidden={start}
-                                      disabled={disabled}
-                />}
-            </TimerInput>
-        </>
+        <Countdown  {...restProps} />
     )
 }
+
 Panel.TeamInput = function ({ ...restProps}){
 
     return(

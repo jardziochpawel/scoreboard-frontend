@@ -11,7 +11,7 @@ import {
     LogoTeamB,
     HelmetSVG,
     HelmetContainer,
-    Knight, MainContainer, LogoContainer, BLShield
+    RKP, MainContainer, LogoContainer, BLShield
 } from "./style/scoreBoard";
 import _ from 'lodash';
 
@@ -93,12 +93,12 @@ ScoreBoard.LogoContainer = function ({children, ...restProps}) {
     )
 }
 
-ScoreBoard.Knight = function ({ ...restProps}) {
+ScoreBoard.RKP = function ({ ...restProps}) {
 
     return(
-        <Knight { ...restProps}>
-            <img src={'/images/knight.png'} alt="Knight"/>
-        </Knight>
+        <RKP { ...restProps}>
+            <img src={'/images/rkp.png'} alt="RKP"/>
+        </RKP>
     )
 }
 
@@ -115,7 +115,7 @@ ScoreBoard.HelmetLeft = function ({ ...restProps}) {
 
     return(
         <HelmetSVG { ...restProps}>
-            <img src={'/images/helmet_v3L.png'} alt="Helmet Left"/>
+            <img src={'/images/helmet_v4L.png'} alt="Helmet Left"/>
         </HelmetSVG>
     )
 }
@@ -124,7 +124,7 @@ ScoreBoard.HelmetRight = function ({ ...restProps}) {
 
     return(
         <HelmetSVG { ...restProps}>
-            <img src={'/images/helmet_v3R.png'} alt="Helmet Left"/>
+            <img src={'/images/helmet_v4R.png'} alt="Helmet Left"/>
         </HelmetSVG>
     )
 }

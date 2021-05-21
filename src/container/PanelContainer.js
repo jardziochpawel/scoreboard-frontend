@@ -1,13 +1,10 @@
 import React, {useEffect} from 'react';
 import {Panel} from "../component";
-import getSecondsFromMMSS from "../helpers/getSecondsFromMMSS";
 import {SCOREBOARD, TEAMS, ENDPOINT} from "../static/data";
-import useCountdown from "../hooks/useCountdown";
 import useLocalStorage from "../hooks/useLocalStorage";
 
-const PanelContainer = (socket) => {
+const PanelContainer = () => {
     const [scoreboard, setScoreboard] = useLocalStorage('scoreboard',SCOREBOARD);
-    const [disabled, setDisable] = useLocalStorage('disabled', false);
 
     useEffect(()=>{
         fetch(ENDPOINT+'/scoreboard/60a17e5c75ef8d9af22dd94c', {
@@ -29,8 +26,7 @@ const PanelContainer = (socket) => {
     }
 
     const onChange = (value) => {
-        const seconds = getSecondsFromMMSS(value);
-        submitData({...scoreboard, time: seconds});
+        submitData({...scoreboard, time: value});
     }
 
     const onChangeTeamA = (value) => {
@@ -107,23 +103,26 @@ const PanelContainer = (socket) => {
 
     const resetPanel = () =>{
         submitData(SCOREBOARD);
-        setDisable(false);
     }
 
     const onStart = () => {
         submitData({...scoreboard, start: true});
-        setDisable(true);
     }
 
     const onPause = () => {
-        submitData({...scoreboard, start: false});
-        setDisable(true);
+        submitData({...scoreboard, pause: true});
+    }
+
+    const onResume = () => {
+        submitData({...scoreboard, pause: false});
     }
 
     const timeReset = () => {
-        submitData({...scoreboard, start: false, reset: true});
-        setDisable(false);
-        submitData({...scoreboard, start: false, reset: false});
+        submitData({...scoreboard, start: false, reset: true, pause: false});
+    }
+
+    const timeResetDone = () => {
+        submitData({...scoreboard, start: false, reset: false, pause: false});
     }
 
     return(
@@ -135,12 +134,13 @@ const PanelContainer = (socket) => {
                     onChange={onChangeTeamA}
                     options={TEAMS}
                 />
-                <Panel.TimerInput
-                    disabled={disabled}
-                    setValue={onChange}
-                    value={scoreboard.time}
-                    start={scoreboard.start}
-                    cd={useCountdown(scoreboard.time, scoreboard.start, scoreboard.reset)}
+                <Panel.Countdown
+                    timerPause={scoreboard.pause}
+                    timerOn={scoreboard.start}
+                    timerReset={scoreboard.reset}
+                    timerResetDone={timeResetDone}
+                    timerChange={onChange}
+                    timerTime={scoreboard.time}
                 />
                 <Panel.TeamInput
                     label='Team B'
@@ -163,7 +163,8 @@ const PanelContainer = (socket) => {
                 <Panel.ButtonScoreTeamB onClick={reduceFighterTeamB}>- 1</Panel.ButtonScoreTeamB>
                 <Panel.ButtonScoreTeamB onClick={addFighterTeamB}>+ 1</Panel.ButtonScoreTeamB>
                 <Panel.Break/>
-                <Panel.ButtonStart onClick={onStart}> Start </Panel.ButtonStart>
+                {!scoreboard.start && <Panel.ButtonStart onClick={onStart}> Start </Panel.ButtonStart>}
+                {scoreboard.start && <Panel.ButtonStart onClick={onResume}> Resume </Panel.ButtonStart>}
                 <Panel.ButtonStart onClick={onPause}> Pause </Panel.ButtonStart>
                 <Panel.Break/>
                 <Panel.ButtonReset onClick={timeReset}> Timer Reset </Panel.ButtonReset>
