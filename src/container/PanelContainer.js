@@ -3,7 +3,7 @@ import {Panel} from "../component";
 import {SCOREBOARD, TEAMS, ENDPOINT} from "../static/data";
 import useLocalStorage from "../hooks/useLocalStorage";
 
-const PanelContainer = () => {
+const PanelContainer = (socket) => {
     const [scoreboard, setScoreboard] = useLocalStorage('scoreboard',SCOREBOARD);
 
     useEffect(()=>{
@@ -106,23 +106,19 @@ const PanelContainer = () => {
     }
 
     const onStart = () => {
-        submitData({...scoreboard, start: true, pause: false });
+        submitData({...scoreboard, start: true, pause: false, reset: false });
     }
 
     const onPause = () => {
-        submitData({...scoreboard, pause: true});
+        submitData({...scoreboard, pause: true, start: true, reset: false});
     }
 
     const onResume = () => {
-        submitData({...scoreboard, pause: false});
+        submitData({...scoreboard, pause: false, start: true, reset: false});
     }
 
     const timeReset = () => {
         submitData({...scoreboard, start: false, reset: true, pause: false});
-    }
-
-    const timeResetDone = () => {
-        submitData({...scoreboard, start: false, reset: false, pause: false});
     }
 
     return(
@@ -135,10 +131,11 @@ const PanelContainer = () => {
                     options={TEAMS}
                 />
                 <Panel.Countdown
+                    socket={socket}
+                    scoreboard={scoreboard}
                     timerPause={scoreboard.pause}
                     timerOn={scoreboard.start}
                     timerReset={scoreboard.reset}
-                    timerResetDone={timeResetDone}
                     timerChange={onChange}
                     timerTime={scoreboard.time}
                 />

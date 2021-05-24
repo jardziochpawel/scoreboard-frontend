@@ -1,34 +1,18 @@
 import { useEffect } from 'react';
 import useLocalStorage from "./useLocalStorage";
-import usePrevious from "./usePrevious";
 
-export default function useCountdown(seconds = 0, start = false, pause = false, reset = false, timerResetDone) {
-    const [timeLeft, setTimeLeft] = useLocalStorage('time-left', seconds);
+export default function useCountdown(minutes, seconds, socket, scoreboard) {
+    const [timeLeft, setTimeLeft] = useLocalStorage('countdown', minutes + ' : ' + seconds);
 
-    if(reset !== false && seconds !== timeLeft){
-        setTimeLeft(seconds);
-        timerResetDone();
-    }
-
-    if(usePrevious(seconds) !== seconds && seconds !== timeLeft && !start && !pause){
-        setTimeLeft(seconds);
-    }
+    socket.socket.emit('timer-data', scoreboard);
 
     useEffect(() => {
 
-        if(!start) return timeLeft;
+        socket.socket.on("timer", data => {
+            setTimeLeft(data);
+        });
 
-        if(pause) return timeLeft;
-
-        if (!timeLeft) return timeLeft;
-
-        const intervalId = setInterval(() => {
-            setTimeLeft(timeLeft - 10);
-        }, 10);
-
-        return () => clearInterval(intervalId);
-
-    }, [seconds, start, pause, timeLeft, setTimeLeft, timerResetDone]);
+    }, [socket, timeLeft, setTimeLeft]);
 
     return timeLeft;
 }
