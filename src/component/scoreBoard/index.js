@@ -97,7 +97,7 @@ ScoreBoard.RKP = function ({ ...restProps}) {
 
     return(
         <RKP { ...restProps}>
-            <img src={'/images/rkp.png'} alt="RKP"/>
+            <img src={'/images/rkp.png'} alt="RKP" width='90' height='95'/>
         </RKP>
     )
 }
@@ -106,7 +106,7 @@ ScoreBoard.BLShield = function ({ ...restProps}) {
 
     return(
         <BLShield { ...restProps}>
-            <img src={'/images/BC_shld.png'} alt="Shield"/>
+            <img src={'/images/BC_shld.png'} alt="Shield" width='110' height='124'/>
         </BLShield>
     )
 }
