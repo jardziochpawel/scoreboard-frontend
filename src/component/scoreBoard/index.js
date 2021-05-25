@@ -14,6 +14,7 @@ import {
     RKP, MainContainer, LogoContainer, BLShield
 } from "./style/scoreBoard";
 import _ from 'lodash';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function ScoreBoard({children, ...restProps}) {
     return(
@@ -97,7 +98,7 @@ ScoreBoard.RKP = function ({ ...restProps}) {
 
     return(
         <RKP { ...restProps}>
-            <img src={'/images/rkp.png'} alt="RKP" width='90' height='95'/>
+            <LazyLoadImage src={'/images/rkp.png'} alt="RKP" width='90' height='95' effect="blur"/>
         </RKP>
     )
 }
@@ -106,7 +107,7 @@ ScoreBoard.BLShield = function ({ ...restProps}) {
 
     return(
         <BLShield { ...restProps}>
-            <img src={'/images/BC_shld.png'} alt="Shield" width='110' height='124'/>
+            <LazyLoadImage src={'/images/BC_shld.png'} alt="Shield" width='110' height='124' effect="blur"/>
         </BLShield>
     )
 }
