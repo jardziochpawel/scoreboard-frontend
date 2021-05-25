@@ -15,8 +15,8 @@ export const TEAMS = [
 
 export const PREFIX = 'scoreboard-app-';
 
-//export const ENDPOINT = "https://scoreboard.niepokorni.pl";
-export const ENDPOINT = "http://localhost:4001";
+export const ENDPOINT = "https://scoreboard.niepokorni.pl";
+//export const ENDPOINT = "http://localhost:4001";
 
 export const SCOREBOARD = {
     "teamA": {
