@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import {Envelope, Lock} from 'styled-icons/fa-solid';
+import {Envelope, Lock} from '@styled-icons/fa-solid';
 
 export const Container = styled.div`
   width: 100vw;

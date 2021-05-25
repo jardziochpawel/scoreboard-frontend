@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="" />
+    <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/login/style/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/style/login.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +103,7 @@
       <workItem from="1621851791694" duration="629000" />
       <workItem from="1621867983696" duration="35000" />
       <workItem from="1621868042777" duration="209000" />
-      <workItem from="1621883067352" duration="27775000" />
+      <workItem from="1621883067352" duration="28213000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1621318903509</created>
@@ -228,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621980757632</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="optimisation images css">
+      <created>1621981264152</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1621981264152</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +264,7 @@
     <MESSAGE value="add to field &quot;pause&quot; &gt;&gt; &quot;false&quot;, to onStart function" />
     <MESSAGE value="timer countdown from server side" />
     <MESSAGE value="auth secure with JWT" />
-    <option name="LAST_COMMIT_MESSAGE" value="auth secure with JWT" />
+    <MESSAGE value="optimisation images css" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimisation images css" />
   </component>
 </project>
