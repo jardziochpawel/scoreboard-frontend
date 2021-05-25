@@ -9,7 +9,7 @@ import {
     ButtonStart,
     Break,
     TeamInput,
-    ScoreTeam
+    ScoreTeam, LogoutButton, Hello, Header
 } from './style/panel';
 import SelectInput from "../selectInput";
 import {Countdown} from "../index";
@@ -90,5 +90,26 @@ Panel.ScoreTeam = function ({ children,  ...restProps}){
 
     return(
         <ScoreTeam {...restProps} >{children}</ScoreTeam>
+    )
+}
+
+Panel.Header = function ({ children,  ...restProps}){
+
+    return(
+        <Header {...restProps} >{children}</Header>
+    )
+}
+
+Panel.Hello = function ({ children,  ...restProps}){
+
+    return(
+        <Hello {...restProps} >Hello! {children}</Hello>
+    )
+}
+
+Panel.LogoutButton = function ({ children,  ...restProps}){
+
+    return(
+        <LogoutButton {...restProps} >{children}</LogoutButton>
     )
 }

@@ -9,12 +9,14 @@ export const TEAMS = [
         {label: 'Lwy Lublin', logo: '/images/lwy.png', value: 'Lwy Lublin'},
         {label: 'Niepokorni', logo: '/images/niepokorni.png', value: 'Niepokorni'},
         {label: 'Sierotki', logo: '/images/sierotki.png', value: 'Sierotki'},
-        {label: 'Taboryci', logo: '/images/sierotki.png', value: 'Taboryci'}
+        {label: 'Taboryci', logo: '/images/sierotki.png', value: 'Taboryci'},
+        {label: 'Prague Trolls', logo: '/images/trolls.png', value: 'Prague Trolls'}
     ];
 
 export const PREFIX = 'scoreboard-app-';
 
-export const ENDPOINT = "https://scoreboard.niepokorni.pl";
+//export const ENDPOINT = "https://scoreboard.niepokorni.pl";
+export const ENDPOINT = "http://localhost:4001";
 
 export const SCOREBOARD = {
     "teamA": {
@@ -30,7 +32,7 @@ export const SCOREBOARD = {
     "time": 300000,
     "reset": true,
     "start": false,
-    "pause": true,
+    "pause": false,
     "fightersTeamA": 5,
     "fightersTeamB": 5,
     "pointsTeamA": 0,

@@ -37,7 +37,7 @@ export default function SelectInput({ label, value, onChange, options, name, ...
 
     return(
         <Container {...restProps}>
-            <LabelText>{label?label:''}</LabelText>
+            <LabelText>{label ? label : ''}</LabelText>
             <Header name={name}
                     selectRef={selectRef}
                     isOpen={isOpen}
@@ -49,19 +49,21 @@ export default function SelectInput({ label, value, onChange, options, name, ...
                         setIsOpen(false);
                     }, 200)}
             >
-                { value === '' ? 'Wybierz' : value.label }
+                { value === '' ? 'Wybierz' : value ? value.label : '' }
             </Header>
             <SIListContainer isOpen={isOpen}>
                 <SIList>
-                    {optionsFilter.map(item =>
-                        <SIListItem isActive={item === value} key={item.value} onClick={()=> {
+                    {optionsFilter.map(item => {
+                        console.log(item);
+                        return (
+                        <SIListItem isActive={item === value} key={item.value} onClick={() => {
                             onChange(item)
                             setToSearch('');
                             toggling();
                         }}>
                             {item.label}
                         </SIListItem>
-                    )}
+                    )})}
                 </SIList>
             </SIListContainer>
         </Container>

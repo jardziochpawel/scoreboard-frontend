@@ -2,21 +2,24 @@ import React, {useEffect} from 'react';
 import {Panel} from "../component";
 import {SCOREBOARD, TEAMS, ENDPOINT} from "../static/data";
 import useLocalStorage from "../hooks/useLocalStorage";
+import {AuthHeader} from '../services/auth-header';
+import AuthService from '../services/auth.service';
+import {useHistory} from "react-router-dom";
 
 const PanelContainer = (socket) => {
     const [scoreboard, setScoreboard] = useLocalStorage('scoreboard',SCOREBOARD);
+    const user = AuthService.getCurrentUser();
+    let history = useHistory();
 
-    useEffect(()=>{
-        fetch(ENDPOINT+'/scoreboard/60a17e5c75ef8d9af22dd94c', {
-                method: 'GET',
-                headers: new Headers([
-                    ['Content-Type', 'application/json']
-                ])
-            }).then(res => res.json()).then(data=>setScoreboard(data)).catch(err=>console.log(err));
-    }, [setScoreboard]);
+    useEffect(() => {
+        socket.socket.on("scoreboard-app-data", data => {
+            setScoreboard(data);
+        });
+
+    }, [socket, setScoreboard]);
 
     const submitData = ( data) => {
-        fetch(ENDPOINT+'/scoreboard/60a17e5c75ef8d9af22dd94c', {
+        AuthHeader(ENDPOINT+'/scoreboard/60a17e5c75ef8d9af22dd94c', {
             method: 'PUT',
             body: JSON.stringify(data),
             headers: new Headers([
@@ -123,6 +126,10 @@ const PanelContainer = (socket) => {
 
     return(
         <Panel>
+            <Panel.Header>
+                <Panel.Hello>{user.fullName}</Panel.Hello>
+                <Panel.LogoutButton onClick={()=>AuthService.logout(history)}>Logout</Panel.LogoutButton>
+            </Panel.Header>
             <Panel.FormContainer>
                 <Panel.TeamInput
                     label='Team A'

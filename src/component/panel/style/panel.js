@@ -108,3 +108,38 @@ export const ScoreTeam = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const Header = styled.div`
+  display: flex;
+  flex-flow: row;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  justify-content: space-between;
+  align-items: baseline;
+  width: auto;
+  height: 80px;
+`;
+
+export const Hello = styled.h3`
+  margin-right: 20px;
+`;
+
+export const LogoutButton = styled.button`
+  border: 1px solid #8800ff;
+  border-radius: 25px;
+  background: rgb(136, 0, 255);
+  background: linear-gradient(45deg, rgb(136, 0, 255) 20%, rgb(160, 91, 238) 40%, rgb(136, 0, 255) 80%);
+  padding: 10px 20px;
+  width: 150px;
+  margin-top: 20px;
+  color: white;
+  font-size: 18px;
+  font-family: 'Audiowide', cursive;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid rgb(135, 32, 226);
+    background: linear-gradient(45deg, rgba(135, 32, 226, 0.8) 20%, rgb(136, 0, 255) 40%, rgba(135, 32, 226, 0.8) 80%);
+  }
+`;
