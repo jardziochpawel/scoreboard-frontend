@@ -11,7 +11,7 @@ const login = (email, password) => {
         .then((response) => {
             const user = decodeJwt(response.data.token);
             return localStorage.setItem("user", JSON.stringify({...user, token: response.data.token}))
-        });
+        }).catch(err => Promise.reject({'message': err.response.data.message, 'error': true}));
 };
 
 const logout = (history) => {

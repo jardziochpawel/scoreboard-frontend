@@ -54,6 +54,7 @@ export const InputGroup = styled.div`
   flex-wrap: wrap;
   align-items: center;
   width: 250px;
+  padding: 10px 10px 0;
   border-bottom: 1px solid white;
   margin-bottom: 20px;
 
@@ -71,7 +72,7 @@ export const Label = styled.label`
 `;
 
 export const Mail = styled.input`
-  width: 230px;
+  width: 200px;
   border: none;
   color: white;
   background-color: transparent;
@@ -91,15 +92,22 @@ export const Mail = styled.input`
 
   &::-webkit-input-placeholder {
     color: white;
+    ${({error})=>error && css`
+    color: darkred;
+  `}
   }
 
   &::placeholder {
     color: white;
+
+    ${({error})=>error && css`
+    color: darkred;
+  `}
   }
 `;
 
 export const Password = styled.input`
-  width: 230px;
+  width: 200px;
   border: none;
   color: white;
   background-color: transparent;
@@ -107,7 +115,10 @@ export const Password = styled.input`
   margin-bottom: 10px;
   font-size: 14px;
   font-family: 'Arial', sans-serif;
-
+  ${({error})=>error && css`
+    color: darkred;
+  `}
+  
   &:focus{
     box-shadow: none;
     outline: none;
@@ -115,10 +126,16 @@ export const Password = styled.input`
   &::-webkit-input-placeholder{
     font-family: 'Audiowide', cursive;
     color: white;
+    ${({error})=>error && css`
+    color: darkred;
+  `}
   }
   &::placeholder{
     font-family: 'Audiowide', cursive;
     color: white;
+    ${({error})=>error && css`
+    color: darkred;
+  `}
   }
 `;
 
@@ -134,12 +151,20 @@ export const IconLock = styled(Lock)`
   color: white;
   width: 14px;
   height: 16px;
+
+  ${({error})=>error && css`
+    color: darkred;
+  `}
 `;
 
 export const IconMail = styled(Envelope)`
   color: white;
   width: 14px;
   height: 16px;
+
+  ${({error})=>error && css`
+    color: darkred;
+  `}
 `;
 
 export const Button = styled.button`
@@ -165,3 +190,8 @@ export const Button = styled.button`
   }
 `;
 
+export const SmallText = styled.small`
+  border-bottom: 1px solid darkred;
+  color: darkred;
+  background-color: rgb(139, 0, 0, 0.2);
+`;

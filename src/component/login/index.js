@@ -11,7 +11,7 @@ import {
     InputGroup,
     IconLock,
     Icon,
-    IconMail
+    IconMail, SmallText
 } from "./style/login";
 
 export default function Login({children, ...restProps}){
@@ -74,4 +74,9 @@ Login.IconMail = function ({ ...restProps}){
 Login.Button = function ({children, ...restProps}){
 
     return(<Button {...restProps}>{children}</Button>);
+}
+
+Login.SmallText = function ({children, ...restProps}){
+
+    return(<SmallText {...restProps}>{children}</SmallText>);
 }

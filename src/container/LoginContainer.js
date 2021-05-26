@@ -5,8 +5,10 @@ import {useHistory} from "react-router-dom";
 
 export default function LoginContainer(){
     const [email, setEmail] = useState('');
-    const [error, setEmailErr] = useState(false);
+    const [emailErr, setEmailErr] = useState(false);
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const [error, setError] = useState(false);
 
     let history = useHistory();
 
@@ -20,6 +22,17 @@ export default function LoginContainer(){
         setEmailErr(!valid(value));
     }
 
+    const onChangeMail = (value) => {
+        setError(false);
+        setEmailErr(false);
+        setEmail(value);
+    }
+
+    const onChangePassword = (value) => {
+        setError(false);
+        setPassword(value);
+    }
+
     const onHandleSubmit = () => {
         if(valid(email) && password !== ''){
             AuthService.login(email, password).then(
@@ -27,7 +40,11 @@ export default function LoginContainer(){
                     history.push("/panel");
                     window.location.reload();
                 }
-            );
+            ).catch(err => {
+                console.log(err);
+                setError(err.error);
+                setMessage(err.message);
+            });
         }
     }
 
@@ -36,14 +53,15 @@ export default function LoginContainer(){
             <Login>
                 <Login.Card>
                     <Login.Title>Scoreboard Panel</Login.Title>
+                    <Login.InputGroup error={emailErr || error}>
+                        <Login.IconMail  error={emailErr || error}/>
+                        <Login.Mail type="text" onChange={(e)=>onChangeMail(e.target.value)} value={email} onBlur={onBlur} error={emailErr || error} placeholder={"E-mail"} />
+                    </Login.InputGroup>
                     <Login.InputGroup error={error}>
-                        <Login.IconMail  error={error}/>
-                        <Login.Mail type="text" onChange={(e)=>setEmail(e.target.value)} value={email} onBlur={onBlur} error={error} placeholder={"E-mail"}/>
+                        <Login.IconLock error={error}/>
+                        <Login.Password type='password' onChange={(e)=>onChangePassword(e.target.value)} value={password} placeholder={"Password"} error={error} />
                     </Login.InputGroup>
-                    <Login.InputGroup>
-                        <Login.IconLock />
-                        <Login.Password type='password' onChange={(e)=>setPassword(e.target.value)} value={password} placeholder={"Password"}/>
-                    </Login.InputGroup>
+                    {error && <Login.SmallText>{message}</Login.SmallText>}
                     <Login.Button onClick={onHandleSubmit} disabled={!valid(email) && password === ''}>Login</Login.Button>
                 </Login.Card>
             </Login>

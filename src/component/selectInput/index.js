@@ -54,7 +54,6 @@ export default function SelectInput({ label, value, onChange, options, name, ...
             <SIListContainer isOpen={isOpen}>
                 <SIList>
                     {optionsFilter.map(item => {
-                        console.log(item);
                         return (
                         <SIListItem isActive={item === value} key={item.value} onClick={() => {
                             onChange(item)
