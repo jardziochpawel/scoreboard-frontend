@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/countdown/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/countdown/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/PanelContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/PanelContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/static/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +104,7 @@
       <workItem from="1621851791694" duration="629000" />
       <workItem from="1621867983696" duration="35000" />
       <workItem from="1621868042777" duration="209000" />
-      <workItem from="1621883067352" duration="37401000" />
+      <workItem from="1621883067352" duration="39443000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1621318903509</created>
@@ -267,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622029841256</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="disabled update time after counter end">
+      <created>1622140651935</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1622140651935</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +305,7 @@
     <MESSAGE value="optimization images and lazy load" />
     <MESSAGE value="change endpoint" />
     <MESSAGE value="validate login form" />
-    <option name="LAST_COMMIT_MESSAGE" value="validate login form" />
+    <MESSAGE value="disabled update time after counter end" />
+    <option name="LAST_COMMIT_MESSAGE" value="disabled update time after counter end" />
   </component>
 </project>
