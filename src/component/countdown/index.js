@@ -2,7 +2,7 @@ import React from 'react';
 import {Countdown} from "./countdown";
 import useCountdown from "../../hooks/useCountdown";
 
-export default function CountdownContainer({timerTime, timerChange, timerOn, timerReset, timerResetDone, timerPause, socket, scoreboard}) {
+export default function CountdownContainer({timerTime, timerChange, timerOn, timerPause, socket, scoreboard}) {
 
     const adjustTimer = input => {
         if (!timerOn) {
@@ -21,7 +21,7 @@ export default function CountdownContainer({timerTime, timerChange, timerOn, tim
     let minutes = ("0" + Math.floor((timerTime / 60000) % 60)).slice(-2);
     let countdown = useCountdown(minutes, seconds, socket, scoreboard);
 
-    if(timerOn){
+    if(timerOn || timerPause){
 
         return (
             <Countdown>
