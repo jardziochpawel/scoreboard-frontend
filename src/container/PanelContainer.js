@@ -167,9 +167,9 @@ const PanelContainer = (socket) => {
                 <Panel.ButtonScoreTeamB onClick={reduceFighterTeamB}>- 1</Panel.ButtonScoreTeamB>
                 <Panel.ButtonScoreTeamB onClick={addFighterTeamB}>+ 1</Panel.ButtonScoreTeamB>
                 <Panel.Break/>
-                { !scoreboard.start && !scoreboard.pause && <Panel.ButtonStart onClick={onStart}> Start </Panel.ButtonStart>}
+                { (!scoreboard.start && !scoreboard.pause)  && <Panel.ButtonStart onClick={onStart}> Start </Panel.ButtonStart>}
                 { ( scoreboard.pause || scoreboard.start) && <Panel.ButtonStart onClick={onResume}> Resume </Panel.ButtonStart>}
-                <Panel.ButtonStart onClick={onPause}> Pause </Panel.ButtonStart>
+                <Panel.ButtonStart onClick={onPause} disabled={scoreboard.pause}> Pause </Panel.ButtonStart>
                 <Panel.Break/>
                 <Panel.ButtonReset onClick={timeReset}> Timer Reset </Panel.ButtonReset>
                 <Panel.ButtonReset onClick={resetPanel}> Panel Reset </Panel.ButtonReset>

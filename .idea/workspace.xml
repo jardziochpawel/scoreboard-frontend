@@ -104,7 +104,8 @@
       <workItem from="1621851791694" duration="629000" />
       <workItem from="1621867983696" duration="35000" />
       <workItem from="1621868042777" duration="209000" />
-      <workItem from="1621883067352" duration="39443000" />
+      <workItem from="1621883067352" duration="40393000" />
+      <workItem from="1622551793242" duration="225000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1621318903509</created>
@@ -274,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622140651935</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="disabled start when paused is true and start is false">
+      <created>1622144933831</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1622144933831</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +314,7 @@
     <MESSAGE value="change endpoint" />
     <MESSAGE value="validate login form" />
     <MESSAGE value="disabled update time after counter end" />
-    <option name="LAST_COMMIT_MESSAGE" value="disabled update time after counter end" />
+    <MESSAGE value="disabled start when paused is true and start is false" />
+    <option name="LAST_COMMIT_MESSAGE" value="disabled start when paused is true and start is false" />
   </component>
 </project>
