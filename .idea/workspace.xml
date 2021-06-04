@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/PanelContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/PanelContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/data.js" afterDir="false" />
-    </list>
+    <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +101,7 @@
       <workItem from="1621867983696" duration="35000" />
       <workItem from="1621868042777" duration="209000" />
       <workItem from="1621883067352" duration="40393000" />
-      <workItem from="1622551793242" duration="225000" />
+      <workItem from="1622551793242" duration="345000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1621318903509</created>
@@ -282,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622144933831</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="disabled start when paused is true and start is false">
+      <created>1622552191372</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1622552191372</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -46,7 +46,7 @@ export default function ScoreBoardContainer(socket){
             <ScoreBoard.LogoContainer>
                 <ScoreBoard.LogoTeamB logo={scoreboard.teamB.logo}/>
             </ScoreBoard.LogoContainer>
-            <ScoreBoard.BLShield />
+            {/*<ScoreBoard.BLShield />*/}
         </ScoreBoard>
     )
 }
