@@ -9,7 +9,7 @@ import {
     ButtonStart,
     Break,
     TeamInput,
-    ScoreTeam, LogoutButton, Hello, Header
+    ScoreTeam, LogoutButton, Hello, Header, BorderedContainer, Text
 } from './style/panel';
 import SelectInput from "../selectInput";
 import {Countdown} from "../index";
@@ -111,5 +111,19 @@ Panel.LogoutButton = function ({ children,  ...restProps}){
 
     return(
         <LogoutButton {...restProps} >{children}</LogoutButton>
+    )
+}
+
+Panel.BorderedContainer = function ({ children, ...restProps}){
+
+    return(
+        <BorderedContainer { ...restProps} >{children}</BorderedContainer>
+    )
+}
+
+Panel.Text = function ({ children, ...restProps}){
+
+    return(
+        <Text { ...restProps} >{children}</Text>
     )
 }

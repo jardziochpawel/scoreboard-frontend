@@ -153,19 +153,42 @@ const PanelContainer = (socket) => {
                     options={TEAMS}
                 />
                 <Panel.Break/>
+                
+
+
                 <Panel.ScoreTeam>{scoreboard.fightersTeamA}</Panel.ScoreTeam>
                 <Panel.ScoreTeam>{scoreboard.pointsTeamA}</Panel.ScoreTeam>
                 <Panel.ScoreTeam>{scoreboard.pointsTeamB}</Panel.ScoreTeam>
                 <Panel.ScoreTeam>{scoreboard.fightersTeamB}</Panel.ScoreTeam>
                 <Panel.Break/>
+                <Panel.BorderedContainer>
                 <Panel.ButtonScoreTeamA onClick={reduceFighterTeamA}>- 1</Panel.ButtonScoreTeamA>
+                <Panel.Text>
+                 Fighters A
+                </Panel.Text>
                 <Panel.ButtonScoreTeamA onClick={addFighterTeamA}>+ 1</Panel.ButtonScoreTeamA>
+                </Panel.BorderedContainer>
+                <Panel.BorderedContainer>
                 <Panel.ButtonScoreTeamA onClick={reduceScoreTeamA}>- 1</Panel.ButtonScoreTeamA>
-                <Panel.ButtonScoreTeamA onClick={addScoreTeamA}>+ 1</Panel.ButtonScoreTeamA>
+                <Panel.Text>
+                Rounds A 
+                </Panel.Text>
+                <Panel.ButtonScoreTeamA onClick={addScoreTeamA}>+ 1</Panel.ButtonScoreTeamA>  
+                </Panel.BorderedContainer>
+                <Panel.BorderedContainer>
                 <Panel.ButtonScoreTeamB onClick={reduceScoreTeamB}>- 1</Panel.ButtonScoreTeamB>
+                <Panel.Text>
+                Rounds B
+                </Panel.Text>
                 <Panel.ButtonScoreTeamB onClick={addScoreTeamB}>+ 1</Panel.ButtonScoreTeamB>
+                </Panel.BorderedContainer>
+                <Panel.BorderedContainer>
                 <Panel.ButtonScoreTeamB onClick={reduceFighterTeamB}>- 1</Panel.ButtonScoreTeamB>
-                <Panel.ButtonScoreTeamB onClick={addFighterTeamB}>+ 1</Panel.ButtonScoreTeamB>
+                <Panel.Text>
+                Fighters B
+                </Panel.Text>
+                <Panel.ButtonScoreTeamB onClick={addFighterTeamB}>+ 1</Panel.ButtonScoreTeamB>                    
+                </Panel.BorderedContainer>
                 <Panel.Break/>
                 { (!scoreboard.start && !scoreboard.pause)  && <Panel.ButtonStart onClick={onStart}> Start </Panel.ButtonStart>}
                 { ( scoreboard.pause || scoreboard.start) && <Panel.ButtonStart onClick={onResume}> Resume </Panel.ButtonStart>}

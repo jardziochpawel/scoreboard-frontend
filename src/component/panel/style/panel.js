@@ -28,7 +28,7 @@ export const FormContainer = styled.div`
 `;
 
 export const ButtonScoreTeamA = styled.button`
-  width: 50px;
+  width: 40px;
   padding: 10px 10px;
   font-family: 'Audiowide', cursive;
   white-space: nowrap;
@@ -44,7 +44,7 @@ export const ButtonScoreTeamA = styled.button`
 `;
 
 export const ButtonScoreTeamB = styled.button`
-  width: 50px;
+  width: 40px;
   padding: 10px 10px;
   font-family: 'Audiowide', cursive;
   white-space: nowrap;
@@ -123,6 +123,22 @@ export const Header = styled.div`
 
 export const Hello = styled.h3`
   margin-right: 20px;
+`;
+
+export const Text = styled.p`
+  font-size: small;
+  margin: 0px;
+`;
+
+export const BorderedContainer = styled.div`
+width: 25%;
+height: auto;
+background-color: inherit;
+border: 1px solid dimgray;
+display: flex;
+flex-flow: row;
+justify-content: space-between;
+align-items: center;
 `;
 
 export const LogoutButton = styled.button`

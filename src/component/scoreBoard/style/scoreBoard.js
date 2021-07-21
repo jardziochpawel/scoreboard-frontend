@@ -178,7 +178,8 @@ export const BLShield = styled.div`
   right: 20px;
   z-index: 1;
   img{
-    width: 110px;
+    width: 70px;
+    height: 80px;
   }
 `;
 
