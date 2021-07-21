@@ -98,7 +98,7 @@ ScoreBoard.RKP = function ({ ...restProps}) {
 
     return(
         <RKP { ...restProps}>
-            <LazyLoadImage src={'/images/rkp.png'} alt="RKP" width='90' height='95' effect="blur"/>
+            <LazyLoadImage src={'/images/hmbgb.png'} alt="RKP" width='90' height='95' effect="blur"/>
         </RKP>
     )
 }
