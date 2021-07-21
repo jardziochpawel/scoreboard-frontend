@@ -131,7 +131,7 @@ export const Text = styled.p`
 `;
 
 export const BorderedContainer = styled.div`
-width: 25%;
+width: 20%;
 height: auto;
 background-color: inherit;
 border: 1px solid dimgray;
