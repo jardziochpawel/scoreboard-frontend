@@ -15,7 +15,7 @@ export const TEAMS = [
         {label: 'Primus', logo: '/images/primus.png', value: 'Primus'},
         {label: 'White Company', logo: '/images/wc.png', value: 'White Company'},
         {label: 'Three Towers', logo: '/images/three_towers.png', value: 'Three Towers'},
-        {label: 'ACG', logo: '/images/glocester.jpg', value: 'ACG'},
+        {label: 'ACG', logo: '/images/acg.png', value: 'ACG'},
         {label: 'Isca', logo: '/images/isca.png', value: 'Isca'},
         {label: 'Northern Wolves', logo: '/images/northen_wolfes.png', value: 'Northern Wolves'},
         {label: 'Invicta', logo: '/images/invicta.png', value: 'Invicta'},
