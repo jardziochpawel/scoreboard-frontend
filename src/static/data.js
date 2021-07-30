@@ -21,8 +21,7 @@ export const TEAMS = [
         {label: ', Invicta', logo: '/images/invicta.png', value: 'Invicta'},
         {label: 'Swords of Cygnus1', logo: '/images/cygnus.png', value: 'Swords of Cygnus1'},
         {label: 'Swords of Cygnus2', logo: '/images/cygnus.png', value: 'Swords of Cygnus2'},
-
-
+        {label: 'Hellions', logo: '/images/acg.png', value: 'Hellions'},
     ];
 
 export const PREFIX = 'scoreboard-app-';
