@@ -19,8 +19,8 @@ export const TEAMS = [
         {label: 'Isca', logo: '/images/isca.png', value: 'Isca'},
         {label: 'Northern Wolves', logo: '/images/northen_wolfes.png', value: 'Northern Wolves'},
         {label: ', Invicta', logo: '/images/invicta.png', value: 'Invicta'},
-        {label: 'Swords of Cygnus1', logo: '/images/cygnus.jpg', value: 'Swords of Cygnus1'},
-        {label: 'Swords of Cygnus2', logo: '/images/cygnus.jpg', value: 'Swords of Cygnus2'},
+        {label: 'Swords of Cygnus1', logo: '/images/cygnus.png', value: 'Swords of Cygnus1'},
+        {label: 'Swords of Cygnus2', logo: '/images/cygnus.png', value: 'Swords of Cygnus2'},
 
 
     ];
