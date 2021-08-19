@@ -3,7 +3,6 @@ import { ScoreBoard } from "../component";
 import useCountdown from "../hooks/useCountdown";
 import useLocalStorage from "../hooks/useLocalStorage";
 import {useQuery} from "../hooks/useQuery";
-import {SCOREBOARD} from "../static/data";
 
 export default function ScoreBoardContainer({socket, scoreboardFetch}){
 
