@@ -2,23 +2,29 @@ import React, { useEffect } from 'react';
 import { ScoreBoard } from "../component";
 import useCountdown from "../hooks/useCountdown";
 import useLocalStorage from "../hooks/useLocalStorage";
-import { SCOREBOARD } from "../static/data";
+import {useQuery} from "../hooks/useQuery";
+import {SCOREBOARD} from "../static/data";
 
-export default function ScoreBoardContainer(socket){
+export default function ScoreBoardContainer({socket, scoreboardFetch}){
 
-    const [scoreboard, setScoreboard] = useLocalStorage('scoreboard', SCOREBOARD);
+    const [scoreboard, setScoreboard] = useLocalStorage('scoreboard', scoreboardFetch);
+
+    let query = useQuery();
+    let countdown;
+    let tournament = query.get('tournament');
 
     useEffect(() => {
-        socket.socket.on("scoreboard-app-data", data => {
+        socket.on("scoreboard-app-data", data => {
             setScoreboard(data);
         });
 
-    }, [socket, setScoreboard]);
+    }, [socket, scoreboard]);
 
-    let seconds = ("0" + (Math.floor((scoreboard.time / 1000) % 60) % 60)).slice(-2);
-    let minutes = ("0" + Math.floor((scoreboard.time / 60000) % 60)).slice(-2);
+    countdown = useCountdown(socket, scoreboard);
 
-    let countdown = useCountdown(minutes, seconds, socket, scoreboard);
+    if(!scoreboard){
+        return(<div>Loading....</div>)
+    }
 
     return(
         <ScoreBoard>
@@ -30,7 +36,7 @@ export default function ScoreBoardContainer(socket){
                     <ScoreBoard.HelmetContainer fightersLeft={scoreboard.fightersTeamA}>
                         <ScoreBoard.HelmetLeft />
                     </ScoreBoard.HelmetContainer>
-                    <ScoreBoard.RKP />
+                    <ScoreBoard.RKP tournament={tournament}/>
                     <ScoreBoard.HelmetContainer right={true} fightersLeft={scoreboard.fightersTeamB}>
                         <ScoreBoard.HelmetRight />
                     </ScoreBoard.HelmetContainer>
@@ -46,7 +52,7 @@ export default function ScoreBoardContainer(socket){
             <ScoreBoard.LogoContainer>
                 <ScoreBoard.LogoTeamB logo={scoreboard.teamB.logo}/>
             </ScoreBoard.LogoContainer>
-            <ScoreBoard.BLShield />
+            {tournament !== 'pl' && <ScoreBoard.BLShield/>}
         </ScoreBoard>
     )
 }

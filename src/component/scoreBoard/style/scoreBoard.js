@@ -168,7 +168,8 @@ export const RKP = styled.div`
   img{
     width: 90px;
   }
-  background-image: radial-gradient(white 30%, rgba(255, 255, 255, 0.01) 70%);`;
+  ${({tournament}) => tournament === 'pl' ?`` :  css`background-image: radial-gradient(white 30%, rgba(255, 255, 255, 0.01) 70%);`}
+  `;
 
 export const BLShield = styled.div`
   position: absolute;

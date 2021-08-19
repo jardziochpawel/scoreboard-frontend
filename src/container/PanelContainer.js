@@ -1,22 +1,28 @@
 import React, {useEffect} from 'react';
 import {Panel} from "../component";
-import {SCOREBOARD, TEAMS, ENDPOINT} from "../static/data";
+import {SCOREBOARD, TEAMS, TEAMS_PL, ENDPOINT} from "../static/data";
 import useLocalStorage from "../hooks/useLocalStorage";
 import {AuthHeader} from '../services/auth-header';
 import AuthService from '../services/auth.service';
 import {useHistory} from "react-router-dom";
+import {useQuery} from "../hooks/useQuery";
+import getSecondsFromMMSS from "../helpers/getSecondsFromMMSS";
 
-const PanelContainer = (socket) => {
-    const [scoreboard, setScoreboard] = useLocalStorage('scoreboard',SCOREBOARD);
+const PanelContainer = ({socket, scoreboardFetch}) => {
+    const [scoreboard, setScoreboard] = useLocalStorage('scoreboard', scoreboardFetch);
+    const [startTime, setStartTime] = useLocalStorage('start-time', scoreboardFetch.time);
     const user = AuthService.getCurrentUser();
     let history = useHistory();
+    let query = useQuery();
+    const teams = query.get('teams') === 'pl' ? TEAMS_PL : TEAMS;
+    socket.emit('timer-data', scoreboard);
 
     useEffect(() => {
-        socket.socket.on("scoreboard-app-data", data => {
+        socket.on("scoreboard-app-data", data => {
             setScoreboard(data);
         });
 
-    }, [socket, setScoreboard]);
+    }, [socket, scoreboard]);
 
     const submitData = ( data) => {
         AuthHeader(ENDPOINT+'/scoreboard/60a17e5c75ef8d9af22dd94c', {
@@ -109,6 +115,7 @@ const PanelContainer = (socket) => {
     }
 
     const onStart = () => {
+        setStartTime(scoreboard.time);
         submitData({...scoreboard, start: true, pause: false, reset: false });
     }
 
@@ -121,7 +128,14 @@ const PanelContainer = (socket) => {
     }
 
     const timeReset = () => {
-        submitData({...scoreboard, start: false, reset: true, pause: false});
+        submitData({...scoreboard, start: false, reset: true, pause: false, time: startTime});
+    }
+
+    const onRefresh = () => {
+        const timeLocalstorage =  getSecondsFromMMSS(JSON.parse(window.localStorage.getItem('scoreboard-app-countdown')));
+        const time = timeLocalstorage !== undefined ? timeLocalstorage : SCOREBOARD.time;
+        console.log(time);
+        submitData({...scoreboard, time: time});
     }
 
     return(
@@ -135,7 +149,7 @@ const PanelContainer = (socket) => {
                     label='Team A'
                     value={scoreboard.teamA}
                     onChange={onChangeTeamA}
-                    options={TEAMS}
+                    options={teams}
                 />
                 <Panel.Countdown
                     socket={socket}
@@ -150,11 +164,9 @@ const PanelContainer = (socket) => {
                     label='Team B'
                     value={scoreboard.teamB}
                     onChange={onChangeTeamB}
-                    options={TEAMS}
+                    options={teams}
                 />
                 <Panel.Break/>
-                
-
 
                 <Panel.ScoreTeam>{scoreboard.fightersTeamA}</Panel.ScoreTeam>
                 <Panel.ScoreTeam>{scoreboard.pointsTeamA}</Panel.ScoreTeam>
@@ -196,6 +208,7 @@ const PanelContainer = (socket) => {
                 <Panel.Break/>
                 <Panel.ButtonReset onClick={timeReset}> Timer Reset </Panel.ButtonReset>
                 <Panel.ButtonReset onClick={resetPanel}> Panel Reset </Panel.ButtonReset>
+                <Panel.ButtonReset onClick={onRefresh}> Refresh </Panel.ButtonReset>
             </Panel.FormContainer>
         </Panel>
     )

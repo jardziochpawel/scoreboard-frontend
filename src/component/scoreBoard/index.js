@@ -94,11 +94,16 @@ ScoreBoard.LogoContainer = function ({children, ...restProps}) {
     )
 }
 
-ScoreBoard.RKP = function ({ ...restProps}) {
+ScoreBoard.RKP = function ({tournament, ...restProps}) {
 
     return(
-        <RKP { ...restProps}>
-            <LazyLoadImage src={'/images/hmbgb.png'} alt="RKP" width='90' height='95' effect="blur"/>
+        <RKP tournament={tournament} { ...restProps}>
+            {
+                tournament === 'pl' ?
+                    <LazyLoadImage src={'/images/rkp.png'} alt="RKP" width='90' height='95' />
+                        :
+                    <LazyLoadImage src={'/images/hmbgb.png'} alt="RKP" width='90' height='95' effect="blur"/>
+            }
         </RKP>
     )
 }
@@ -116,7 +121,7 @@ ScoreBoard.HelmetLeft = function ({ ...restProps}) {
 
     return(
         <HelmetSVG { ...restProps}>
-            <img src={'/images/helmet_v4L.png'} alt="Helmet Left"/>
+            <img src={'/images/helmet_l.png'} alt="Helmet Left"/>
         </HelmetSVG>
     )
 }
@@ -125,7 +130,7 @@ ScoreBoard.HelmetRight = function ({ ...restProps}) {
 
     return(
         <HelmetSVG { ...restProps}>
-            <img src={'/images/helmet_v4R.png'} alt="Helmet Left"/>
+            <img src={'/images/helmet_r.png'} alt="Helmet Left"/>
         </HelmetSVG>
     )
 }

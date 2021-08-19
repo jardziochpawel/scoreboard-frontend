@@ -17,9 +17,8 @@ export default function CountdownContainer({timerTime, timerChange, timerOn, tim
             }
         }
     };
-    let seconds = ("0" + (Math.floor((timerTime / 1000) % 60) % 60)).slice(-2);
-    let minutes = ("0" + Math.floor((timerTime / 60000) % 60)).slice(-2);
-    let countdown = useCountdown(minutes, seconds, socket, scoreboard);
+
+    let countdown = useCountdown( socket, scoreboard );
 
     if(timerOn || timerPause){
 
