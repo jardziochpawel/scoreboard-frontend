@@ -1,33 +1,54 @@
-import styled, {css} from 'styled-components';
+import styled, {css} from 'styled-components/macro';
 
 export const Row = styled.div`
+  position: relative;
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  height: auto;
-  color: white;
-  text-shadow: 0 2px 1px #7c7c7c,
-  -1px 3px 1px #545454,
-  -2px 5px 1px #484848;
+  width: auto;
+  color: black;
   font-size: 36px;
-  @media(max-width: 1400px){
-    font-size: 30px;
+  background-color: #fac622;
+  height: 80px;
+  
+  &:after {
+    right: -30px;
+    content: "";
+    position: absolute;
+    border-right: 30px solid transparent;
+    border-top: 40px solid #fac622;
+    border-bottom: 40px solid #fac622;
+  }
+  ${({left}) => !left && css`
+    &:before {
+      left: -30px;
+      content: "";
+      position: absolute;
+      border-left: 30px solid transparent;
+      border-top: 40px solid #fac622;
+      border-bottom: 40px solid #fac622;
+    }
+  `}
+
+  .flip-horizontal-bottom {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform: rotateX(-360deg) translateY(-100%);
   }
 `;
 
 export const Container = styled.div`
   display: flex;
-  flex-flow: column;
-  justify-content: space-between;
+  flex-flow: row;
+  justify-content: center;
   align-items: center;
-  width: calc(350px + 350px + 60px + 60px + 200px);
   height: auto;
-
-  @media(max-width: 1400px){
-    width: calc(200px + 200px + 60px + 60px + 200px);
-  }
+  width: 100vw;
+  
+  ${({left}) => left && css`
+    justify-content: flex-start;
+  `}
 `;
 
 export const ScoreTeamA = styled.div`
@@ -35,11 +56,12 @@ export const ScoreTeamA = styled.div`
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  font-family: 'MedievalSharp', cursive;
-  font-weight: 900;  
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;  
   width: 60px;
   height: 50px;
-  padding: 0 20px;
+  padding: 0 5px;
+  font-size: 48px;
 `;
 
 export const TeamA = styled.div`
@@ -47,10 +69,10 @@ export const TeamA = styled.div`
   flex-flow: row;
   justify-content: flex-start;
   align-items: center;
-  font-family: 'MedievalSharp', cursive;
-  font-weight: 900;
-  width: 300px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   height: 50px;
+  padding: 0 5px;
   white-space: nowrap;
   @media(max-width: 1400px){
     width: 200px;
@@ -62,11 +84,12 @@ export const ScoreTeamB = styled.div`
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  font-family: 'MedievalSharp', cursive;
-  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   width: 60px;
   height: 50px;
-  padding: 0 20px;
+  padding: 0 5px;
+  font-size: 48px;
 `;
 
 export const TeamB = styled.div`
@@ -74,11 +97,13 @@ export const TeamB = styled.div`
   flex-flow: row;
   justify-content: flex-end;
   align-items: center;
-  font-family: 'MedievalSharp', cursive;
-  font-weight: 900;
-  width: 300px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   height: 50px;
+  padding: 0 5px;
   white-space: nowrap;
+  margin-right: 20px;
+  
   @media(max-width: 1400px){
     width: 200px;
   }
@@ -89,75 +114,58 @@ export const Timer = styled.div`
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  font-family: 'MedievalSharp', cursive;
+  font-family: 'Roboto', sans-serif;
   font-weight: 900;
+  font-size: 50px;
   min-width: 200px;
-  height: 50px;
-  padding: 0 20px;  
+  height: 80px;
+  padding: 0;  
   z-index: 999;
+  background-color: black;
+  color: #fac622;
+  
   @media(max-width: 1400px){
     width: 150px;
   }
 `;
 
 export const LogoTeamA = styled.div`
-  height: 175px;
-  width: 175px;
+  height: 70px;
+  width: 150px;
   ${({logo}) => css`
-    background: url("${logo}") center / contain no-repeat;
+    background: url("${logo}") center 70% / 250% no-repeat;
   `}
-  margin: 4px 0;
-  
-  @media(max-width: 1400px){
-    height: 100px;
-    width: 100px;
-  }
+  margin: 4px;
 `;
 
 export const LogoTeamB = styled.div`
-  height: 175px;
-  width: 175px;
+  height: 70px;
+  width: 150px;
   ${({logo}) => css`
-    background: url("${logo}") center / contain no-repeat;
+    background: url("${logo}") center 70% / 250% no-repeat;
   `}
-  margin: 4px 0;
-  
-  @media(max-width: 1400px){
-    height: 100px;
-    width: 100px;
-  }
+  margin: 4px;
 `;
 
 export const HelmetContainer = styled.div`
-  width: calc(35px * 5);
   height: 50px;
+  width: calc(60px * 5);
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  ${({right})=>right ? css`justify-content: flex-end;` : css`justify-content: flex-start;`}
-  margin: 0;
-  
-  @media(max-width: 1400px){
-    width: calc(30px * 5);
-  }
+  ${({right})=>right ? css`justify-content: flex-start;` : css`justify-content: flex-end;`}
+  margin: 0 10px;
 `;
 
 export const HelmetSVG = styled.div`
-  height: 50px;
-  width: 50px;
-  @media(max-width: 1400px){
-    height: 40px;
-    width: 40px;
-  }
+  display: flex;
+  align-items: center;  
+  padding: 0 5px;
+
 
   img {
     width: 50px;
     height: 50px;
-    
-    @media(max-width: 1400px){
-      height: 40px;
-      width: 40px;
-    }
   }
 `;
 
@@ -187,13 +195,11 @@ export const BLShield = styled.div`
 export const MainContainer = styled.div`
   display: flex;
   flex-flow: row;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: center;
   width: 100vw;
   padding: 0 100px 50px;
   height: 200px;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0) 100%);
 
   @media(max-width: 1400px){
     padding: 0 50px 50px;
@@ -205,5 +211,43 @@ export const LogoContainer = styled.div`
   height: auto;
   justify-content: center;
   align-items: center;
-  width: 200px;
+`;
+
+export const LiveContainer = styled.div`
+  display: flex;
+  height: 80px;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: bold;
+  padding-left: 10px;
+  top: 80px;
+  left: 0;
+`;
+
+export const LiveText = styled.div`
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;  
+  &:before{
+    content: '';
+    z-index: 1;
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: -10px;
+  }
 `;

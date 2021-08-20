@@ -1,17 +1,4 @@
 export const TEAMS = [
-        // {label: 'KS Rycerz', logo: '/images/ksr.png', value: 'KS Rycerz'},
-        // {label: 'KS Rycerz 2', logo: '/images/ksr.png', value: 'KS Rycerz 2'},
-        // {label: 'KS Rycerz 3', logo: '/images/ksr.png', value: 'KS Rycerz 3'},
-        // {label: 'RKS Silesia', logo: '/images/silesia.png', value: 'RKS Silesia'},
-        // {label: 'Legenda Północy', logo: '/images/legenda.png', value: 'Legenda Północy'},
-        // {label: 'Legenda Północy 2', logo: '/images/legenda.png', value: 'Legenda Północy 2'},
-        // {label: 'Legenda Północy 3', logo: '/images/legenda.png', value: 'Legenda Północy 3'},
-        // {label: 'Lwy Lublin', logo: '/images/lwy.png', value: 'Lwy Lublin'},
-        // {label: 'Niepokorni', logo: '/images/niepokorni.png', value: 'Niepokorni'},
-        // {label: 'Sierotki', logo: '/images/sierotki.png', value: 'Sierotki'},
-        // {label: 'Taboryci', logo: '/images/sierotki.png', value: 'Taboryci'},
-        // {label: 'Prague Trolls', logo: '/images/trolls.png', value: 'Prague Trolls'}
-
         {label: 'Primus', logo: '/images/primus.png', value: 'Primus'},
         {label: 'White Company', logo: '/images/wc.png', value: 'White Company'},
         {label: 'Three Towers', logo: '/images/three_towers.png', value: 'Three Towers'},
@@ -25,18 +12,18 @@ export const TEAMS = [
     ];
 
 export const TEAMS_PL = [
-    {label: 'KS Rycerz', logo: '/images/ksr.png', value: 'KS Rycerz'},
-    {label: 'KS Rycerz 2', logo: '/images/ksr.png', value: 'KS Rycerz 2'},
-    {label: 'KS Rycerz 3', logo: '/images/ksr.png', value: 'KS Rycerz 3'},
-    {label: 'RKS Silesia', logo: '/images/silesia.png', value: 'RKS Silesia'},
-    {label: 'Legenda Północy', logo: '/images/legenda.png', value: 'Legenda Północy'},
-    {label: 'Legenda Północy 2', logo: '/images/legenda.png', value: 'Legenda Północy 2'},
-    {label: 'Legenda Północy 3', logo: '/images/legenda.png', value: 'Legenda Północy 3'},
-    {label: 'Lwy Lublin', logo: '/images/lwy.png', value: 'Lwy Lublin'},
-    {label: 'Niepokorni', logo: '/images/niepokorni.png', value: 'Niepokorni'},
-    {label: 'Sierotki', logo: '/images/sierotki.png', value: 'Sierotki'},
-    {label: 'Taboryci', logo: '/images/sierotki.png', value: 'Taboryci'},
-    {label: 'Prague Trolls', logo: '/images/trolls.png', value: 'Prague Trolls'}
+    {value: 'KSR', logo: '/images/ksr.png', label: 'KS Rycerz'},
+    {value: 'KSR2', logo: '/images/ksr.png', label: 'KS Rycerz 2'},
+    {value: 'KSR3', logo: '/images/ksr.png', label: 'KS Rycerz 3'},
+    {value: 'SIL', logo: '/images/silesia.png', label: 'RKS Silesia'},
+    {value: 'LP', logo: '/images/legenda.png', label: 'Legenda Północy'},
+    {value: 'LP2', logo: '/images/legenda.png', label: 'Legenda Północy 2'},
+    {value: 'LP3', logo: '/images/legenda.png', label: 'Legenda Północy 3'},
+    {value: 'LWY', logo: '/images/lwy.png', label: 'Lwy Lublin'},
+    {value: 'NIE', logo: '/images/niepokorni.png', label: 'Niepokorni'},
+    {value: 'SIE', logo: '/images/sierotki.png', label: 'Sierotki'},
+    {value: 'TAB', logo: '/images/sierotki.png', label: 'Taboryci'},
+    {value: 'PRT', logo: '/images/trolls.png', label: 'Prague Trolls'}
 ];
 
 
@@ -63,6 +50,5 @@ export const SCOREBOARD = {
     "fightersTeamA": 5,
     "fightersTeamB": 5,
     "pointsTeamA": 0,
-    "pointsTeamB": 0,
-    "timeLeft": "05:00"
+    "pointsTeamB": 0
 };

@@ -6,14 +6,18 @@ export default function useCountdown(socket, scoreboard) {
     let time = scoreboard ? scoreboard.time : 0;
     let seconds = ("0" + (Math.floor((time / 1000) % 60) % 60)).slice(-2);
     let minutes = ("0" + Math.floor((time / 60000) % 60)).slice(-2);
-    const [timeLeft, setTimeLeft] = useLocalStorage('countdown', minutes + ' : ' + seconds);
+    let MMSS = (minutes + ':' + seconds).replace(/\s/g, '');
+    const [timeLeft, setTimeLeft] = useLocalStorage('countdown', MMSS);
+
     socket.emit('timer-data', scoreboard);
 
     useEffect(() => {
+
         if(scoreboard.time < getSecondsFromMMSS(timeLeft)){
-            setTimeLeft(minutes + ' : ' + seconds);
+            MMSS =( minutes + ':' + seconds).replace(/\s/g, '');
+            setTimeLeft(MMSS);
         }
-        console.log(timeLeft);
+
         socket.on("timer", data => {
             setTimeLeft(data);
         });

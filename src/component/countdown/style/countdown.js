@@ -45,7 +45,7 @@ export const Display = styled.div`
 export const Time = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 36px;
   margin: 5px 0;

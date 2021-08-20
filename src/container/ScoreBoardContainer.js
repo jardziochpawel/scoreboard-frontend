@@ -1,16 +1,13 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import { ScoreBoard } from "../component";
 import useCountdown from "../hooks/useCountdown";
 import useLocalStorage from "../hooks/useLocalStorage";
-import {useQuery} from "../hooks/useQuery";
 
 export default function ScoreBoardContainer({socket, scoreboardFetch}){
 
     const [scoreboard, setScoreboard] = useLocalStorage('scoreboard', scoreboardFetch);
-
-    let query = useQuery();
+    const [className, setClassName] = useState('');
     let countdown;
-    let tournament = query.get('tournament');
 
     useEffect(() => {
         socket.on("scoreboard-app-data", data => {
@@ -25,33 +22,49 @@ export default function ScoreBoardContainer({socket, scoreboardFetch}){
         return(<div>Loading....</div>)
     }
 
+    if(scoreboard.pause){
+        setTimeout(()=>setClassName('flip-horizontal-bottom'), 3000);
+    }
+
+    if(!scoreboard.pause){
+        setTimeout(()=>setClassName(''), 200);
+    }
     return(
         <ScoreBoard>
-            <ScoreBoard.LogoContainer>
-                <ScoreBoard.LogoTeamA logo={scoreboard.teamA.logo}/>
-            </ScoreBoard.LogoContainer>
-            <ScoreBoard.Container>
-                <ScoreBoard.Row>
-                    <ScoreBoard.HelmetContainer fightersLeft={scoreboard.fightersTeamA}>
-                        <ScoreBoard.HelmetLeft />
-                    </ScoreBoard.HelmetContainer>
-                    <ScoreBoard.RKP tournament={tournament}/>
-                    <ScoreBoard.HelmetContainer right={true} fightersLeft={scoreboard.fightersTeamB}>
-                        <ScoreBoard.HelmetRight />
-                    </ScoreBoard.HelmetContainer>
-                </ScoreBoard.Row>
-                <ScoreBoard.Row>
+
+            <ScoreBoard.Container left={scoreboard.pause}>
+                {scoreboard.pause && <ScoreBoard.Row left={true}>
+                    <ScoreBoard.LiveContainer className={className}>
+                        <ScoreBoard.LiveText>Live</ScoreBoard.LiveText>
+                    </ScoreBoard.LiveContainer>
                     <ScoreBoard.TeamA>{scoreboard.teamA.value}</ScoreBoard.TeamA>
                     <ScoreBoard.ScoreTeamA>{scoreboard.pointsTeamA}</ScoreBoard.ScoreTeamA>
-                    <ScoreBoard.Timer>{countdown}</ScoreBoard.Timer>
+                    <div>-</div>
                     <ScoreBoard.ScoreTeamB>{scoreboard.pointsTeamB}</ScoreBoard.ScoreTeamB>
                     <ScoreBoard.TeamB>{scoreboard.teamB.value}</ScoreBoard.TeamB>
-                </ScoreBoard.Row>
+                </ScoreBoard.Row>}
+
+                {!scoreboard.pause && <ScoreBoard.Row>
+                    <ScoreBoard.HelmetContainer fightersLeft={scoreboard.fightersTeamA}>
+                        <ScoreBoard.HelmetLeft/>
+                    </ScoreBoard.HelmetContainer>
+
+                    <ScoreBoard.LogoContainer>
+                        <ScoreBoard.LogoTeamA logo={scoreboard.teamA.logo}/>
+                    </ScoreBoard.LogoContainer>
+
+                    <ScoreBoard.Timer>{countdown}</ScoreBoard.Timer>
+
+                    <ScoreBoard.LogoContainer>
+                        <ScoreBoard.LogoTeamB logo={scoreboard.teamB.logo}/>
+                    </ScoreBoard.LogoContainer>
+
+                    <ScoreBoard.HelmetContainer right={true} fightersLeft={scoreboard.fightersTeamB}>
+                        <ScoreBoard.HelmetRight/>
+                    </ScoreBoard.HelmetContainer>
+                </ScoreBoard.Row>}
+
             </ScoreBoard.Container>
-            <ScoreBoard.LogoContainer>
-                <ScoreBoard.LogoTeamB logo={scoreboard.teamB.logo}/>
-            </ScoreBoard.LogoContainer>
-            {tournament !== 'pl' && <ScoreBoard.BLShield/>}
         </ScoreBoard>
     )
 }

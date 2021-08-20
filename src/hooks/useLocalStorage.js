@@ -3,7 +3,6 @@ import {useState, useEffect} from 'react';
 import {PREFIX} from '../static/data';
 
 function useLocalStorage(key, initialValue) {
-
 const prefixedKey = PREFIX + key;
 const [value, setValue] = useState(() => {
         const jsonValue = localStorage.getItem(prefixedKey);
@@ -19,7 +18,7 @@ const [value, setValue] = useState(() => {
     });
 
     useEffect(() => {
-        localStorage.setItem(prefixedKey, JSON.stringify(value))
+        localStorage.setItem(prefixedKey, JSON.stringify(value));
     }, [prefixedKey, value]);
 
     return [value, setValue];

@@ -12,6 +12,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Audiowide', cursive;
     
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
 }`;

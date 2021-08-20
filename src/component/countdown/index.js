@@ -24,9 +24,7 @@ export default function CountdownContainer({timerTime, timerChange, timerOn, tim
 
         return (
             <Countdown>
-                <Countdown.Time>
-                    {countdown}
-                </Countdown.Time>
+                <Countdown.Time>{countdown}</Countdown.Time>
             </Countdown>
         )
     }
@@ -41,9 +39,7 @@ export default function CountdownContainer({timerTime, timerChange, timerOn, tim
                     &#8679;
                 </Countdown.Button>
 
-                <Countdown.Time>
-                    {countdown}
-                </Countdown.Time>
+                <Countdown.Time>{countdown}</Countdown.Time>
 
                 <Countdown.Button onClick={() => adjustTimer("decMinutes")}>
                     &#8681;

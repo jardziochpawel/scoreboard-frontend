@@ -11,7 +11,7 @@ import {
     LogoTeamB,
     HelmetSVG,
     HelmetContainer,
-    RKP, MainContainer, LogoContainer, BLShield
+    RKP, MainContainer, LogoContainer, BLShield, LiveContainer, LiveText
 } from "./style/scoreBoard";
 import _ from 'lodash';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -149,5 +149,19 @@ ScoreBoard.HelmetContainer = function ({right = false, children, fightersLeft, .
                 return(<div key={key}>{value}</div>)
             })}
         </HelmetContainer>
+    )
+}
+
+ScoreBoard.LiveContainer = function ({children, ...restProps}) {
+
+    return(
+        <LiveContainer {...restProps}>{children}</LiveContainer>
+    )
+}
+
+ScoreBoard.LiveText = function ({children, ...restProps}) {
+
+    return(
+        <LiveText {...restProps}>{children}</LiveText>
     )
 }
