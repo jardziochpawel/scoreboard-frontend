@@ -130,21 +130,21 @@ export const Timer = styled.div`
 `;
 
 export const LogoTeamA = styled.div`
-  height: 70px;
+  height: 76px;
   width: 180px;
   ${({logo}) => css`
     background: url("${logo}") center / cover no-repeat;
   `}
-  margin: 4px;
+  margin: 2px 4px;
 `;
 
 export const LogoTeamB = styled.div`
-  height: 70px;
+  height: 76px;
   width: 180px;
   ${({logo}) => css`
     background: url("${logo}") center / cover no-repeat;
   `}
-  margin: 4px;
+  margin: 2px 4px;
 `;
 
 export const HelmetContainer = styled.div`

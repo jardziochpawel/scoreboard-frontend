@@ -311,7 +311,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629463442481</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="change logos">
+      <created>1629472289817</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1629472289817</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add new logo">
+      <created>1629472515265</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1629472515265</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,8 +336,6 @@
       <path value="$PROJECT_DIR$/backend" />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="first commit" />
-    <MESSAGE value="init commit" />
     <MESSAGE value="endpoint update and static files" />
     <MESSAGE value="change view scoreboard" />
     <MESSAGE value="change package" />
@@ -347,6 +359,8 @@
     <MESSAGE value="add refresh button" />
     <MESSAGE value="remove unused import" />
     <MESSAGE value="change graphics to BL" />
-    <option name="LAST_COMMIT_MESSAGE" value="change graphics to BL" />
+    <MESSAGE value="change logos" />
+    <MESSAGE value="add new logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new logo" />
   </component>
 </project>
