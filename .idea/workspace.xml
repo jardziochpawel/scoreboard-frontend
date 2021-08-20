@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/countdown/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/countdown/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/countdown/style/countdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/countdown/style/countdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/ScoreBoardContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/ScoreBoardContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global-style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/global-style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useCountdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useCountdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useLocalStorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useLocalStorage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/static/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -312,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629403566292</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="change graphics to BL">
+      <created>1629463442480</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1629463442481</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,6 +346,7 @@
     <MESSAGE value="disabled start when paused is true and start is false" />
     <MESSAGE value="add refresh button" />
     <MESSAGE value="remove unused import" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove unused import" />
+    <MESSAGE value="change graphics to BL" />
+    <option name="LAST_COMMIT_MESSAGE" value="change graphics to BL" />
   </component>
 </project>

@@ -131,18 +131,18 @@ export const Timer = styled.div`
 
 export const LogoTeamA = styled.div`
   height: 70px;
-  width: 150px;
+  width: 180px;
   ${({logo}) => css`
-    background: url("${logo}") center 70% / 250% no-repeat;
+    background: url("${logo}") center / cover no-repeat;
   `}
   margin: 4px;
 `;
 
 export const LogoTeamB = styled.div`
   height: 70px;
-  width: 150px;
+  width: 180px;
   ${({logo}) => css`
-    background: url("${logo}") center 70% / 250% no-repeat;
+    background: url("${logo}") center / cover no-repeat;
   `}
   margin: 4px;
 `;
@@ -161,7 +161,6 @@ export const HelmetSVG = styled.div`
   display: flex;
   align-items: center;  
   padding: 0 5px;
-
 
   img {
     width: 50px;
