@@ -134,8 +134,7 @@ const PanelContainer = ({socket, scoreboardFetch}) => {
     const onRefresh = () => {
         const timeLocalstorage =  getSecondsFromMMSS(JSON.parse(window.localStorage.getItem('scoreboard-app-countdown')));
         const time = timeLocalstorage !== undefined ? timeLocalstorage : SCOREBOARD.time;
-        console.log(time);
-        submitData({...scoreboard, time: time});
+        submitData({...scoreboard, time: time, reset: true});
     }
 
     return(

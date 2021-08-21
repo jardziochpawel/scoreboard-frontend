@@ -4,7 +4,7 @@
     <list default="true" id="a0347203-3bed-4201-82ca-074d21d2811e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/scoreBoard/style/scoreBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/PanelContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/PanelContainer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629472515265</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="change size teams logo">
+      <created>1629475730455</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1629475730455</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +343,6 @@
       <path value="$PROJECT_DIR$/backend" />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="endpoint update and static files" />
     <MESSAGE value="change view scoreboard" />
     <MESSAGE value="change package" />
     <MESSAGE value="add media css" />
@@ -361,6 +367,7 @@
     <MESSAGE value="change graphics to BL" />
     <MESSAGE value="change logos" />
     <MESSAGE value="add new logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new logo" />
+    <MESSAGE value="change size teams logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="change size teams logo" />
   </component>
 </project>

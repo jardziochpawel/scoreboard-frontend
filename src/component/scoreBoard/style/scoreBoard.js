@@ -10,24 +10,24 @@ export const Row = styled.div`
   color: black;
   font-size: 36px;
   background-color: #fac622;
-  height: 80px;
+  height: 62px;
   
   &:after {
-    right: -30px;
+    right: -20px;
     content: "";
     position: absolute;
-    border-right: 30px solid transparent;
-    border-top: 40px solid #fac622;
-    border-bottom: 40px solid #fac622;
+    border-right: 20px solid transparent;
+    border-top: 31px solid #fac622;
+    border-bottom: 31px solid #fac622;
   }
   ${({left}) => !left && css`
     &:before {
-      left: -30px;
+      left: -20px;
       content: "";
       position: absolute;
-      border-left: 30px solid transparent;
-      border-top: 40px solid #fac622;
-      border-bottom: 40px solid #fac622;
+      border-left: 20px solid transparent;
+      border-top: 31px solid #fac622;
+      border-bottom: 31px solid #fac622;
     }
   `}
 
@@ -58,10 +58,10 @@ export const ScoreTeamA = styled.div`
   align-items: center;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;  
-  width: 60px;
-  height: 50px;
+  width: 30px;
+  height: 42px;
   padding: 0 5px;
-  font-size: 48px;
+  font-size: 36px;
 `;
 
 export const TeamA = styled.div`
@@ -70,13 +70,11 @@ export const TeamA = styled.div`
   justify-content: flex-start;
   align-items: center;
   font-family: 'Roboto', sans-serif;
+  font-size: 36px;
   font-weight: 400;
-  height: 50px;
+  height: 42px;
   padding: 0 5px;
   white-space: nowrap;
-  @media(max-width: 1400px){
-    width: 200px;
-  }
 `;
 
 export const ScoreTeamB = styled.div`
@@ -86,27 +84,23 @@ export const ScoreTeamB = styled.div`
   align-items: center;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  width: 60px;
-  height: 50px;
+  width: 30px;
+  height: 42px;
   padding: 0 5px;
-  font-size: 48px;
+  font-size: 36px;
 `;
 
 export const TeamB = styled.div`
   display: flex;
   flex-flow: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   font-family: 'Roboto', sans-serif;
+  font-size: 36px;
   font-weight: 400;
-  height: 50px;
+  height: 42px;
   padding: 0 5px;
   white-space: nowrap;
-  margin-right: 20px;
-  
-  @media(max-width: 1400px){
-    width: 200px;
-  }
 `;
 
 export const Timer = styled.div`
@@ -116,9 +110,9 @@ export const Timer = styled.div`
   align-items: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  font-size: 50px;
-  min-width: 200px;
-  height: 80px;
+  font-size: 42px;
+  min-width: 173px;
+  height: 62px;
   padding: 0;  
   z-index: 999;
   background-color: black;
@@ -130,8 +124,8 @@ export const Timer = styled.div`
 `;
 
 export const LogoTeamA = styled.div`
-  height: 76px;
-  width: 180px;
+  height: 59px;
+  width: 173px;
   ${({logo}) => css`
     background: url("${logo}") center / cover no-repeat;
   `}
@@ -139,8 +133,8 @@ export const LogoTeamA = styled.div`
 `;
 
 export const LogoTeamB = styled.div`
-  height: 76px;
-  width: 180px;
+  height: 59px;
+  width: 173px;
   ${({logo}) => css`
     background: url("${logo}") center / cover no-repeat;
   `}
@@ -148,7 +142,7 @@ export const LogoTeamB = styled.div`
 `;
 
 export const HelmetContainer = styled.div`
-  height: 50px;
+  height: 42px;
   width: calc(60px * 5);
   display: flex;
   flex-wrap: nowrap;
@@ -163,8 +157,8 @@ export const HelmetSVG = styled.div`
   padding: 0 5px;
 
   img {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
   }
 `;
 
@@ -187,7 +181,7 @@ export const BLShield = styled.div`
   z-index: 1;
   img{
     width: 70px;
-    height: 80px;
+    height: 62px;
   }
 `;
 
@@ -214,19 +208,19 @@ export const LogoContainer = styled.div`
 
 export const LiveContainer = styled.div`
   display: flex;
-  height: 80px;
-  width: 250px;
+  height: 62px;
+  width: 173px;
   justify-content: center;
   align-items: center;
   background-color: red;
   color: white;
   font-family: 'Roboto', sans-serif;
-  font-size: 50px;
+  font-size: 42px;
   text-transform: uppercase;
   position: relative;
   font-weight: bold;
   padding-left: 10px;
-  top: 80px;
+  top: 62px;
   left: 0;
 `;
 
@@ -240,8 +234,8 @@ export const LiveText = styled.div`
     content: '';
     z-index: 1;
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 31px;
+    width: 31px;
     background: #fff;
     border-radius: 50%;
     position: relative;
